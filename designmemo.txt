@@ -1,0 +1,24 @@
+Why is a stack the right choice for undo/redo?
+
+A stack is the right choice for undo/redo because it operates on a Last-In, First-Out (LIFO) principle. 
+This makes it ideal for backtracking: the most recent action can be undone first, and if needed, redone in reverse order. 
+Using a stack allows the program to easily keep track of the sequence of actions and reverse or replay them in the correct order.
+
+Why is a queue better suited for the help desk?
+
+A queue is better suited for a help desk because it processes requests in the order they arrive, following a First-In, First-Out (FIFO) principle. 
+This ensures fairness, so the first customer to request help is served first, preventing long waits or complaints.
+
+How do your implementations differ from Python’s built-in lists?
+
+Stacks and queues have specific behaviors with their own methods:
+
+A stack is Last-In, First-Out (LIFO), meaning the most recently added item is removed first. 
+Common operations are push (add) and pop (remove from the top). 
+
+A queue is First-In, First-Out (FIFO), meaning the earliest added item is removed first. 
+Common operations are enqueue (add at the rear) and dequeue (remove from the front).
+
+Python’s built-in list, on the other hand, doesn’t provide stack- or queue-specific methods and does not enforce LIFO or FIFO rules. 
+Custom Stack and Queue classes enforce the rules of the structure: with a stack, you cannot remove from the middle, and with a queue, you cannot remove the newest item first. 
+In contrast, with Python lists, you can break these rules—for example, list.pop(5) removes an item from the middle.
